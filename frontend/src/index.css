@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 100%);
+}
+
+/* Global Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Base Styles */
+* {
+  @apply transition-colors duration-300;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Toast Container Styling */
+.Toastify__toast-container {
+  @apply p-0;
+}
+
+.Toastify__toast {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  animation: slideInUp 0.4s ease-out;
+}
+
+.Toastify__toast--success {
+  @apply bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border-emerald-500/30;
+}
+
+.Toastify__toast--error {
+  @apply bg-gradient-to-r from-red-500/20 to-rose-500/20 border-red-500/30;
+}
+
+.Toastify__toast--warning {
+  @apply bg-gradient-to-r from-amber-500/20 to-orange-500/20 border-amber-500/30;
+}
+
+.Toastify__toast--info {
+  @apply bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30;
+}
+
+.Toastify__toast-body {
+  @apply text-white font-medium;
+}
+
+.Toastify__progress-bar {
+  @apply bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+.Toastify__close-button {
+  @apply text-white/70 hover:text-white;
+}
+
+/* Utility Classes */
+.glass-effect {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.glass-dark {
+  @apply backdrop-blur-xl bg-slate-900/40 border border-white/10;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.gradient-border {
+  @apply border-4 border-transparent bg-clip-padding;
+  background-image: linear-gradient(rgba(15, 23, 42, 1), rgba(15, 23, 42, 1)), linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.card-hover {
+  @apply transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply border-2 border-transparent bg-gradient-to-r from-blue-500/20 to-purple-600/20 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.input-elegant {
+  @apply w-full bg-slate-900/50 border-2 border-slate-700/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-900/80 backdrop-blur-sm;
+}
