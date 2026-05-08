@@ -7,6 +7,7 @@ const Navbar = () => {
 
   const navigateToHome = () => {
     toast.success('✨ Welcome to Home Page!!', {
+      toastId: 'navbar-home-toast',
       icon: '🏠',
       className: 'glass-effect',
     })
@@ -16,6 +17,7 @@ const Navbar = () => {
   const navigateToStudents = () => {
     navigate("/students");
     toast.success('📚 Welcome to Student Portal!!', {
+      toastId: 'navbar-students-toast',
       icon: '👥',
       className: 'glass-effect',
     })

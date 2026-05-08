@@ -29,7 +29,7 @@ const App = () => {
 
       {/* Toast Container with advanced styling */}
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={4000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -39,7 +39,7 @@ const App = () => {
         draggable
         pauseOnHover
         theme="dark"
-        limit={3}
+        limit={1}
       />
     </div>
   )
