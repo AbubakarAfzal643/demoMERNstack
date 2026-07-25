@@ -17,6 +17,10 @@ export default {
         'fade-in': 'fadeIn 0.6s ease-out',
         'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
         shimmer: 'shimmer 2s infinite',
+        holographic: 'holographic 6s ease infinite',
+        float: 'float 6s ease-in-out infinite',
+        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+        'scan-line': 'scanLine 8s linear infinite',
       },
       keyframes: {
         blob: {
@@ -59,6 +63,22 @@ export default {
           '100%': {
             'background-position': '1000px 0',
           },
+        },
+        holographic: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glowPulse: {
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+        },
+        scanLine: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
         },
       },
       colors: {

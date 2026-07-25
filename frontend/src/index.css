@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -141,6 +141,13 @@ body {
 
 .gradient-text {
   @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.futuristic-glow-text {
+  text-shadow:
+    0 0 10px rgba(0, 245, 255, 0.5),
+    0 0 30px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(236, 72, 153, 0.2);
 }
 
 .gradient-border {
